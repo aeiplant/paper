@@ -1,0 +1,139 @@
+:root {
+	--fg1: #202020;
+	--fg2: #727272;
+	--bg1: #fcfcfc;
+	--bg2: #f2f2f2;
+	--bg3: #e0e0e0;
+
+	--padding: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--fg1: #fcfcfc;
+		--fg2: #727272;
+		--bg1: #202020;
+		--bg2: #282828;
+		--bg3: #363636;
+	}
+}
+
+body {
+    color: var(--fg1);
+    background-color: var(--bg1);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+	padding: var(--padding);
+	line-height: 1.4em;
+}
+
+li {
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+li::marker {
+	color: var(--fg2);
+	transition: linear 100ms;
+}
+
+li:hover::marker {
+	color: var(--fg1);
+}
+
+a, a:link {
+	color: var(--fg1);
+	text-decoration: none;
+	border-bottom: 1px dotted var(--fg1);
+}
+
+a:hover {
+	border-bottom: 1px solid var(--fg1);
+}
+
+hr {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border: 1px solid var(--fg1);
+}
+
+blockquote {
+	background-color: var(--bg2);
+	margin: 0;
+	padding: var(--padding);
+	border-left: 2px solid var(--fg1);
+}
+
+pre {
+	color: white;
+	background-color: black;
+	padding: var(--padding);
+	overflow-x: scroll;
+}
+
+table {
+	background-color: var(--bg2);
+	width: 100%;
+	border-spacing: 0;
+}
+
+table caption {
+	padding: var(--padding);
+}
+
+tr:nth-child(2n) {
+	background-color: var(--bg3);
+}
+
+th {
+	padding: var(--padding);
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	border-bottom: 2px solid var(--fg1);
+	text-align: left;
+}
+
+td {
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+details {
+	background-color: var(--bg2);
+	padding: var(--padding);
+}
+
+details summary {
+	cursor: pointer;
+}
+
+details[open=""] summary {
+	margin-bottom: var(--padding);
+	padding-bottom: var(--padding);
+	border-bottom: var(--bg3) 2px solid;
+}
+
+img {
+	max-width: 100%;
+}
+
+mark {
+	background-color: var(--fg1);
+	color: var(--bg1);
+}
+
+header {
+	margin-bottom: 2.8em;
+}
+
+section {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+footer {
+	margin-top: 2.8em;
+}
