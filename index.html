@@ -44,8 +44,8 @@
       </section>
       <section>
         <blockquote>
-          <i>"awawawawawa :neofox_floof:"</i><br>
-          - Someone, nope, not me, certainly not.
+          <cite>"awawawawawa :neofox_floof:"</cite><br>
+          - Someone.
         </blockquote>
       </section>
       <section>
@@ -69,6 +69,9 @@
                 π/6
               </th>
               <th>
+                π/4
+              </th>
+              <th>
                 π/3
               </th>
               <th>
@@ -85,6 +88,7 @@
               <td>√2/2</td>
               <td>√3/2</td>
               <td>1</td>
+              <td>0</td>
             </tr>
             <tr>
               <td>cos(<var>x</var>)</td>
@@ -93,14 +97,16 @@
               <td>√2/2</td>
               <td>1/2</td>
               <td>0</td>
+              <td>-1</td>
             </tr>
             <tr>
               <td>tan(<var>x</var>)</td>
               <td>0</td>
               <td>√3/3</td>
               <td>1</td>
-              <td>3</td>
+              <td>√3</td>
               <td></td>
+              <td>0</td>
             </tr>
           </table>
         </p>
@@ -115,10 +121,51 @@
           </details>
         </p>
       </section>
+      <section>
+        <form onsubmit="return false;">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+    
+          <label for="id">User id (read only)</label>
+          <input readonly="" name="id" id="id" value="04D6H89Z">
+    
+          <label for="disabled">Random disabled input</label>
+          <input disabled="" name="disabled" id="disabled" placeholder="Because why not?">
+    
+          <label for="about">About me</label>
+          <textarea name="about" id="about" placeholder="I am a textarea..."></textarea>
+    
+          <label>Choose a radio:</label>
+          <div>
+            <input type="radio" id="john" name="drone" value="john" checked="">
+            <label for="john">John Doe</label>
+          </div>
+          <div>
+            <input type="radio" id="jane" name="drone" value="jane" checked="">
+            <label for="jane">Jane Doe</label>
+          </div>
+          <div>
+            <input type="radio" id="johnny" name="drone" value="johnny" checked="">
+            <label for="johnny">Johnny Doe</label>
+          </div>
+    
+          <br>
+    
+          <label>Checkboxes</label>
+          <div>
+            <input type="checkbox" name="unchecked" id="unchecked">
+            <label for="unchecked">Unchecked</label>
+            <input type="checkbox" name="remember" id="remember" checked="">
+            <label for="remember">Remember me</label>
+          </div>
+    
+          <input type="submit">
+        </form>
+      </section>
     </main>
     <footer>
-      paper.css by <a href="https://aei.omg.lol">aei</a><br>
-      <a href="https://sr.ht/~aei/paper.css/">source code</a>
+      <a href="/LICENSE">MIT License</a>
+      <a href="https://git.sr.ht/~aei/paper.css/">check the source code</a>
     </footer>
   </body>
 </html>

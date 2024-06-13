@@ -6,6 +6,8 @@
 	--bg3: #e0e0e0;
 
 	--padding: 1em;
+	--radius: 4px;
+	--transition: linear 100ms;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,12 +20,18 @@
 	}
 }
 
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
 body {
-    color: var(--fg1);
-    background-color: var(--bg1);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+	color: var(--fg1);
+	background-color: var(--bg1);
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 	padding: var(--padding);
 	line-height: 1.4em;
 }
@@ -35,7 +43,7 @@ li {
 
 li::marker {
 	color: var(--fg2);
-	transition: linear 100ms;
+	transition: var(--transition);
 }
 
 li:hover::marker {
@@ -52,6 +60,11 @@ a:hover {
 	border-bottom: 1px solid var(--fg1);
 }
 
+a:visited {
+	color: var(--fg2);
+	border-bottom: 1px dotted var(--fg2);
+}
+
 hr {
 	margin-top: 2em;
 	margin-bottom: 2em;
@@ -62,7 +75,8 @@ blockquote {
 	background-color: var(--bg2);
 	margin: 0;
 	padding: var(--padding);
-	border-left: 2px solid var(--fg1);
+	border-left: 4px solid var(--fg1);
+    border-radius: var(--radius);
 }
 
 pre {
@@ -70,12 +84,14 @@ pre {
 	background-color: black;
 	padding: var(--padding);
 	overflow-x: scroll;
+    border-radius: var(--radius);
 }
 
 table {
 	background-color: var(--bg2);
 	width: 100%;
 	border-spacing: 0;
+        border-radius: var(--radius);
 }
 
 table caption {
@@ -104,6 +120,7 @@ td {
 details {
 	background-color: var(--bg2);
 	padding: var(--padding);
+    border-radius: var(--radius);
 }
 
 details summary {
@@ -113,7 +130,7 @@ details summary {
 details[open=""] summary {
 	margin-bottom: var(--padding);
 	padding-bottom: var(--padding);
-	border-bottom: var(--bg3) 2px solid;
+	border-bottom: 2px solid var(--bg3);
 }
 
 img {
@@ -136,4 +153,37 @@ section {
 
 footer {
 	margin-top: 2.8em;
+}
+
+/**/
+
+button, input, textarea {
+    color: var(--fg1);
+    background-color: var(--bg2);
+    border-radius: var(--radius);
+    border: 2px solid var(--bg3);
+    transition: var(--transition);
+}
+
+button:hover, input:focus, textarea:focus {
+    color: var(--fg1);
+    background-color: var(--bg3);
+    border: 2px solid var(--fg2);
+}
+
+button:active {
+    background-color: var(--bg1);
+    border: 2px solid var(--bg3);
+}
+
+input:not([type="checkbox"], [type="radio"]), textarea {
+    display: block;
+    width: 100%;
+    padding: var(--padding);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+label {
+    font-weight: bold;
 }
