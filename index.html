@@ -15,8 +15,7 @@
   <body>
     <header>
       <h1>paper.css</h1>
-      <h4>A minimal, monochrome, classless stylesheet.</h4>
-      <h4><i>'cause sometimes, you just don't need much.</i></h4>
+      <p><i>A minimal, monochrome, classless stylesheet.</i></p>
     </header>
     <main>
       <section>
@@ -50,9 +49,17 @@
       </section>
       <section>
         <p>
-          <mark>Want to use it?</mark> Feel free to <a href="/paper.css">download the stylesheet</a> and link it to your website, like this:
+          <mark>Want to use it?</mark>
         </p>
+        <ol>
+          <li>Good luck tolerating my stuff.</li>
+          <li><a href="/paper.css">Download the stylesheet</a> and link it to your website:</li>
+        </ol>
         <pre><code>&lt;link rel="stylesheet" href="/paper.css"&gt;</code></pre>
+      </section>
+      <section>
+        <h1>Headers are also styled</h1>
+        I wanted to add something to further seperate chunks of texts with just the header, so I have it its own horizontal rule because it looked neat.
       </section>
       <section>
         <p>
@@ -122,50 +129,37 @@
         </p>
       </section>
       <section>
+      </section>
+      <section>
         <form onsubmit="return false;">
           <label for="email">Email</label>
           <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
-    
-          <label for="id">User id (read only)</label>
-          <input readonly="" name="id" id="id" value="04D6H89Z">
-    
+
+          <label for="id">User ID (Read only)</label>
+          <input readonly="" name="id" value="1234567890">
+
           <label for="disabled">Random disabled input</label>
-          <input disabled="" name="disabled" id="disabled" placeholder="Because why not?">
-    
+          <input disabled="" name="disabled" placeholder="Because why not?">
+
           <label for="about">About me</label>
-          <textarea name="about" id="about" placeholder="I am a textarea..."></textarea>
-    
-          <label>Choose a radio:</label>
-          <div>
-            <input type="radio" id="john" name="drone" value="john" checked="">
-            <label for="john">John Doe</label>
-          </div>
-          <div>
-            <input type="radio" id="jane" name="drone" value="jane" checked="">
-            <label for="jane">Jane Doe</label>
-          </div>
-          <div>
-            <input type="radio" id="johnny" name="drone" value="johnny" checked="">
-            <label for="johnny">Johnny Doe</label>
-          </div>
-    
-          <br>
-    
-          <label>Checkboxes</label>
-          <div>
-            <input type="checkbox" name="unchecked" id="unchecked">
-            <label for="unchecked">Unchecked</label>
-            <input type="checkbox" name="remember" id="remember" checked="">
-            <label for="remember">Remember me</label>
-          </div>
-    
+          <textarea name="about" placeholder="I am a textarea..."></textarea>
+
           <input type="submit">
         </form>
       </section>
+      <section>
+        Also...
+        <button>Buttons!</button><br>
+        They do nothing here... <button>but they are buttons!</button>
+      </section>
     </main>
+    <hr>
     <footer>
-      <a href="/LICENSE">MIT License</a><br>
-      <a href="https://git.sr.ht/~aei/paper.css/">check the source code</a>
+      <p>
+        <a href="/LICENSE">MIT License</a><br>
+        Also inspired by the <a href="https://www.cssbed.com/">CSS Bed</a> collection<br>
+        Check the <a href="https://git.sr.ht/~aei/paper.css/">source code</a>
+      </p>
     </footer>
   </body>
 </html>

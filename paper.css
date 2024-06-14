@@ -34,6 +34,9 @@ body {
 	margin-right: auto;
 	padding: var(--padding);
 	line-height: 1.4em;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 li {
@@ -76,7 +79,7 @@ blockquote {
 	margin: 0;
 	padding: var(--padding);
 	border-left: 4px solid var(--fg1);
-    border-radius: var(--radius);
+	border-radius: var(--radius);
 }
 
 pre {
@@ -84,14 +87,14 @@ pre {
 	background-color: black;
 	padding: var(--padding);
 	overflow-x: scroll;
-    border-radius: var(--radius);
+	border-radius: var(--radius);
 }
 
 table {
 	background-color: var(--bg2);
 	width: 100%;
 	border-spacing: 0;
-        border-radius: var(--radius);
+	border-radius: var(--radius);
 }
 
 table caption {
@@ -120,7 +123,8 @@ td {
 details {
 	background-color: var(--bg2);
 	padding: var(--padding);
-    border-radius: var(--radius);
+	border-radius: var(--radius);
+	border: 2px solid var(--bg3);
 }
 
 details summary {
@@ -140,6 +144,8 @@ img {
 mark {
 	background-color: var(--fg1);
 	color: var(--bg1);
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 header {
@@ -158,32 +164,51 @@ footer {
 /**/
 
 button, input, textarea {
-    color: var(--fg1);
-    background-color: var(--bg2);
-    border-radius: var(--radius);
-    border: 2px solid var(--bg3);
-    transition: var(--transition);
+	color: var(--fg1);
+	background-color: var(--bg2);
+	border-radius: var(--radius);
+	border: 2px solid var(--bg3);
+	transition: var(--transition);
 }
 
-button:hover, input:focus, textarea:focus {
-    color: var(--fg1);
-    background-color: var(--bg3);
-    border: 2px solid var(--fg2);
+button:hover, input:not([type="submit"]):focus, textarea:focus, input[type="submit"]:hover {
+	color: var(--fg1);
+	background-color: var(--bg3);
+	border: 2px solid var(--fg2);
 }
 
-button:active {
-    background-color: var(--bg1);
-    border: 2px solid var(--bg3);
+input[type="submit"] {
+	border: 2px solid var(--bg3);
+	background-color: var(--bg2);
+}
+
+button:active, input[type="submit"]:active {
+	background-color: var(--bg1);
+	border: 2px solid var(--bg3);
 }
 
 input:not([type="checkbox"], [type="radio"]), textarea {
-    display: block;
-    width: 100%;
-    padding: var(--padding);
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+	display: block;
+	width: 100%;
+	padding: var(--padding);
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+input:disabled {
+	color: var(--fg2);
+	background-color: var(--bg2);
+}
+
+input:read-only:not([type="submit"]) {
+	border: unset;
 }
 
 label {
-    font-weight: bold;
+	font-weight: bold;
+}
+
+textarea {
+	max-width: 100%;
+	min-height: 150px;
 }
