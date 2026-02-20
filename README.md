@@ -1,10 +1,9 @@
 # paper.css
 > *Just becasue I felt like it*
 
-`paper.css` is a simple *classless* CSS stylesheet, as in it's as plug-and-play as it can get.  
-No fumbling with classes necessary, just `<link>` it and it'll do it's best :>
+`paper.css` is a simple classless CSS stylesheet, as in it's as plug-and-play as it can get.
 
-MIT Licensed, feel free to use it however you like.
+Released under the MIT License, feel free to use it however you like.
 
 ---
 
